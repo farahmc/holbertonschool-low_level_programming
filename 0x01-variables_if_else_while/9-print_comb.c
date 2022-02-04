@@ -4,8 +4,9 @@
  *main - Defines main can only be called without any parameters
  *
  *Description: int defines num to print
- *for writes the character to stdout
- *where num starts at 0, stops at 9 and ascends by one increment
+ *while num is less than 9, print
+ *if num less than 9, add comma and space
+ *
  *Return: 0 at the end of the function
  *
  */
