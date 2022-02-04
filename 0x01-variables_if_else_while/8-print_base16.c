@@ -4,27 +4,31 @@
  *main - Defines main can only be called without any parameters
  *
  *Description: int defines num to print
+ *n sets variable
  *while num is less than 9, print
- *if num less than 9, add comma and space
- *
+ *increasing by 1 increment
+ *n sets variable
+ *while character is less than f, print
+ *increasing by 1 increment
  *Return: 0 at the end of the function
  *
  */
 
 int main(void)
 {
+int n;
+n = '0';
 
-int num;
-
-num = '0';
-while (num <= '9')
+while (n <= '9')
 {
-	putchar(num);
-	if (num < '9')
-	{ putchar (',');
-	  putchar (' ');
-	}
-	num++;
+putchar(n);
+n = n + 1;
+}
+n = 'a';
+while (n <= 'f')
+{
+putchar(n);
+n = n + 1;
 }
 putchar ('\n');
 return (0);
