@@ -6,11 +6,11 @@
  *main - Defines main can only be called without any parameters
  *
  *Description: if variable is larger than 0, print variable is
- *postitive
+ *positive
  *else will print variable is 0 if variable is 0
  *else will print variable is negative if variable is less than 0
  *
- *Return: 0 at the end of the function  goes there
+ *Return: 0 at the end of the function
  */
 
 int main(void)
