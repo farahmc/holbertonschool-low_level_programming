@@ -25,5 +25,6 @@ while (num <= '9')
 	}
 	num++;
 }
+putchar ('\n');
 return (0);
 }
