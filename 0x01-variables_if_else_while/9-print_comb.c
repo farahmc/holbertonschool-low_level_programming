@@ -21,7 +21,7 @@ while (num <= '9')
 	putchar(num);
 	if (num < '9')
 	{ putchar (',');
-	  putchar ('\n');
+	  putchar (' ');
 	}
 	num++;
 }
