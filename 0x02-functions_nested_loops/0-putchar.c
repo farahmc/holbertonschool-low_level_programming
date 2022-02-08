@@ -1,5 +1,13 @@
 #include "main.h"
 
+/**
+ *main - Defines main can only be called without any parameters
+ *
+ *Description: print _putchar and new line
+ *
+ *Return: 0 at the end of the function
+ */
+
 int main(void)
 {
 	_putchar('_');
