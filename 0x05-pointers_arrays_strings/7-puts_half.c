@@ -31,15 +31,11 @@ int _strlen(char *s)
 
 void  _puts(char *str)
 {
-	int eachchar;
-	int stringlength;
-
-	stringlength = _strlen(str);
-
-	for (eachchar = 0; eachchar < stringlength; eachchar++)
-		_putchar(str[eachchar]);
-
-	_putchar('\n');
+	while (*str != '\0')
+	{
+		_putchar(*str);
+		str++;
+	}
 }
 
 /**
@@ -64,4 +60,5 @@ void puts_half(char *str)
 	{
 		_puts(str + ((length - 1) / 2));
 	}
+	_putchar('\n');
 }
