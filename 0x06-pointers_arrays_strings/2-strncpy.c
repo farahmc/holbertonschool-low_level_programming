@@ -15,26 +15,20 @@
 
 char *_strncpy(char *dest, char *src, int n)
 {
-	int charofdest;
 	int count;
 
-	charofdest = 0;
-	while(dest[charofdest] != '\0')
-		charofdest = charofdest + 1;
-
-/*
- *	charofdest = _strlen(dest)
- */
-
 	count = 0;
-	while(src[count] != '\0' && count < n)
+	while (src[count] != '\0' && count < n)
 	{
 		dest[count] = src[count];
 		count = count + 1;
 	}
 
-	if (n > count)
+	while (count < n)
+	{
 		dest[count] = '\0';
+		count = count + 1;
+	}
 
 	return  (dest);
 }
