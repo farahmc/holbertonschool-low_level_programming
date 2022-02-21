@@ -28,6 +28,6 @@ char *_strchr(char *s, char c)
 
 	if (s[count] == '\0')
 		return (s);
-	else
-		return (0);
+
+	return (0);
 }
