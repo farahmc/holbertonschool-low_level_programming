@@ -44,15 +44,14 @@ char *_strstr(char *haystack, char *needle)
 	while (haystack[hcount] != '\0')
 	{
 		if (haystack[hcount] == needle[0])
+		{
+			if (match(&haystack[hcount], needle) == 1)
 			{
-				if (match(&haystack[hcount], needle) == 1)
-				{
-					return(&haystack[hcount]);
-				}
+				return (&haystack[hcount]);
 			}
+		}
 		hcount = hcount + 1;
 	}
-
 	if (*needle == '\0')
 		return (haystack);
 
