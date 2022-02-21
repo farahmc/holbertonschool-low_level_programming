@@ -17,7 +17,7 @@ char *_memcpy(char *dest, char *src, unsigned int n)
 	unsigned int count;
 
 	count = 0;
-	while (count <= n)
+	while (count < n)
 	{
 		dest[count] = src[count];
 		count = count + 1;
