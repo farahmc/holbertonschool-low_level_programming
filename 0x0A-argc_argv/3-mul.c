@@ -7,7 +7,7 @@
  * @argv: argument vector
  *
  * Description: multiply 2 numbers given on command line and print result
- * if no arguments received, print error
+ * if 2 arguments not received, print error
  *
  * Return: 0 is success, if no arguments received, return 1
  */
