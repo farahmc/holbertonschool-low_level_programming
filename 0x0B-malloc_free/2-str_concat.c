@@ -39,7 +39,6 @@ int _strlen(char *s)
 char *str_concat(char *s1, char *s2)
 {
 	int len;
-	int i = 0;
 	char *concat;
 	char *beg;
 
@@ -56,19 +55,19 @@ char *str_concat(char *s1, char *s2)
 		return (NULL);
 
 	beg = concat;
-	while (s1[i] != '\0')
+	while (*s1 != '\0')
 	{
-		concat[i] = s1[i];
-		concat = concat + 1;
-		i = i + 1;
+		*concat = *s1;
+		*concat++;
+		*s1++;
 	}
-	while (s2[i] != '\0')
+	while (*s2 != '\0')
 	{
-		concat[i] = s2[i];
-		concat = concat + 1;
-		i = i + 1;
+		*concat = *s2;
+		*concat++;
+		*s2++;
 	}
-	concat[i] = '\0';
+	*concat = '\0';
 
 	return (beg);
 }
