@@ -22,6 +22,20 @@ int _strlen(char *s)
 	return (len);
 }
 
+/**
+ * str_concat- concatenates 2 strings
+ * @s1: first string
+ * @s2: string to append to s1
+ *
+ * Description: find length of s1 + s2
+ * allocate memory to length of s1 + s2 + 1 to accomodate null byte
+ * loop through s1 and s2, assigning to concat as a temp hold
+ *
+ * Return: Null if null bytes in s1 or s2
+ * Null if concat is null
+ * concatenated string from beginning if chars present
+ */
+
 char *str_concat(char *s1, char *s2)
 {
 	int len;
@@ -29,7 +43,10 @@ char *str_concat(char *s1, char *s2)
 	char *concat;
 	char *beg;
 
-	if (s1 == NULL || s2 == NULL)
+	if (s1 == NULL)
+		return (NULL);
+
+	if (s2 == NULL)
 		return (NULL);
 
 	len = _strlen(s1) + _strlen(s2);
@@ -51,7 +68,7 @@ char *str_concat(char *s1, char *s2)
 		concat = concat + 1;
 		i = i + 1;
 	}
-	*concat = '\0';
+	concat[i] = '\0';
 
 	return (beg);
 }
