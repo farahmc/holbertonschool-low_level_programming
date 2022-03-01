@@ -44,7 +44,7 @@ char *_strdup(char *str)
 		return (NULL);
 	len = _strlen(str);
 
-	dest = malloc(sizeof(*str) * (index + 1));
+	dest = malloc(sizeof(*str) * len);
 
 	while (index <= len)
 	{
