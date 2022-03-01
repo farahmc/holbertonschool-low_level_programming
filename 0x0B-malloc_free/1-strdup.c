@@ -43,7 +43,7 @@ char *_strdup(char *str)
 	if (str == NULL)
 		return (NULL);
 
-	dest = malloc(len + 1);
+	dest = malloc(sizeof(*str) * (len + 1));
 
 	if (dest == NULL)
 		return (NULL);
