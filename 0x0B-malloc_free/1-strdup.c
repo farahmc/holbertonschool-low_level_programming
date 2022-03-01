@@ -38,7 +38,7 @@ char *_strdup(char *str)
 {
 	int index = 0;
 	char *dest;
-	int = len;
+	int len;
 
 	if (str == NULL)
 		return (NULL);
