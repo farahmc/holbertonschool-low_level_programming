@@ -3,6 +3,26 @@
 #include <stdlib.h>
 
 /**
+ * _strlen- counts number of characters in string
+ * @s: string to be counted
+ *
+ * Description: loop to count number of characters in string
+ * that is lcated by a pointer
+ *
+ * Return: number of characters in string
+ */
+
+int _strlen(char *s)
+{
+	int len;
+
+	for (len = 0; *s != '\0'; s++)
+		len++;
+
+	return (len);
+}
+
+/**
  * _strdup- copy a given string to a newly allocated space in memory
  * @str: string to be copied
  *
@@ -18,13 +38,15 @@ char *_strdup(char *str)
 {
 	int index = 0;
 	char *dest;
+	int len;
 
 	if (str == NULL)
 		return (NULL);
+	len = _strlen(str);
 
 	dest = malloc(sizeof(*str) * (index + 1));
 
-	while (str[index] != '\0')
+	while (index <= len)
 	{
 		dest[index] = str[index];
 		index = index + 1;
