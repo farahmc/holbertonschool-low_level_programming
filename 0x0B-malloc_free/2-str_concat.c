@@ -27,8 +27,13 @@ int _strlen(char *s)
  * @s1: first string
  * @s2: second string to append to first string
  *
- * Description:
+ * Description: memory allocated to length of both strings + 1 for null byte
+ * loops through s1 and s2, placing into concat as a holder for entire string
+ * then null byte at end of concat
  *
+ * Return: empty string if null byte present in s1 or s2
+ * null if concat is null
+ * concat string if success
  */
 
 char *str_concat(char *s1, char *s2)
