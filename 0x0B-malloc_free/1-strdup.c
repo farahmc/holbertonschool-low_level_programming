@@ -38,21 +38,20 @@ char *_strdup(char *str)
 {
 	int index = 0;
 	char *dest;
-	int len;
+	int len = _strlen(str);
 
 	if (str == NULL)
 		return (NULL);
-	len = _strlen(str);
 
 	dest = malloc(sizeof(*str) * (len + 1));
+
+	if (dest == NULL)
+		return (NULL);
 
 	while (index <= len)
 	{
 		dest[index] = str[index];
 		index = index + 1;
 	}
-	if (dest == NULL)
-		return (NULL);
-
 	return (dest);
 }
