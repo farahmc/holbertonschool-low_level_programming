@@ -22,15 +22,26 @@ int _strlen(char *s)
 	return (len);
 }
 
+/**
+ * str_concat- concatenates 2 strings
+ * @s1: first string
+ * @s2: second string to append to first string
+ *
+ * Description:
+ *
+ */
+
 char *str_concat(char *s1, char *s2)
 {
 	int len;
 	int i = 0;
+	int i2 = 0;
 	char *concat;
-	char *beg;
 
-	if (s1 == NULL || s2 == NULL)
-		return (NULL);
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
 
 	len = _strlen(s1) + _strlen(s2);
 	concat = malloc(sizeof(char) * (len + 1));
@@ -38,20 +49,18 @@ char *str_concat(char *s1, char *s2)
 	if (concat == NULL)
 		return (NULL);
 
-	beg = concat;
 	while (s1[i] != '\0')
 	{
 		concat[i] = s1[i];
-		concat = concat + 1;
 		i = i + 1;
 	}
-	while (s2[i] != '\0')
+	while (s2[i2] != '\0')
 	{
-		concat[i] = s2[i];
-		concat = concat + 1;
+		concat[i] = s2[i2];
 		i = i + 1;
+		i2 = i2 + 1;
 	}
-	*concat = '\0';
+	concat[i] = '\0';
 
-	return(beg);
+	return(concat);
 }
