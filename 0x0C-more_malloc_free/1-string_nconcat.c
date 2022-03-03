@@ -110,7 +110,7 @@ char *_strncat(char *dest, char *src, int n)
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	int len_s1, len_s2;
+	unsigned int len_s1, len_s2, i = 0, i2 = 0;
 	char *concat;
 
 	if (s1 == NULL)
@@ -125,9 +125,20 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (concat == NULL)
 		return (NULL);
 
-	_strcat(concat, s1);
-	_strncat(concat, s2, n);
+
+	while (s1[i] != '\0')
+	{
+		concat[i] = s1[i];
+		i = i +1;
+	}
+
+	while (s2[i2] != '\0' && i2 < n)
+	{
+		concat[i] = s2[i2];
+		i = i + 1;
+		i2 = i2 + 1;
+	}
+	concat[i] = '\0';
 
 	return (concat);
-
 }
