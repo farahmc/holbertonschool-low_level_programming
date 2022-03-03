@@ -57,7 +57,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	while (s1[i] != '\0')
 	{
 		concat[i] = s1[i];
-		i = i +1;
+		i = i + 1;
 	}
 
 	while (s2[i2] != '\0' && i2 < n)
