@@ -36,7 +36,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	while (i < (size * nmemb))
 	{
-		temp[i] = '0';
+		temp[i] = '\0';
 		i = i + 1;
 	}
 	return (array);
