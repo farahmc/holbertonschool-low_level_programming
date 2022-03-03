@@ -8,7 +8,10 @@
  * @nmemb: elements of the array
  * @size: size of each array in bytes
  *
- * Description: set memory to zero
+ * Description: void pointer array reassigned to char, also to enable
+ * dereferencing in loop
+ * chars in nmemb passed through loop and incremented
+ * set values in memory to zero
  *
  * Return: a pointer to the allocated memory
  * if nmemb or size is 0, return null
@@ -19,7 +22,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	void *array;
 	unsigned int i;
-	unsigned int *temp;
+	char *temp;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
@@ -31,9 +34,9 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	i = 0;
 	temp = array;
 
-	while (i <= nmemb)
+	while (i < (size * nmemb))
 	{
-		temp[i] = 0;
+		temp[i] = '0';
 		i = i + 1;
 	}
 	return (array);
