@@ -3,7 +3,7 @@
 
 /**
  * print_dog- function that prints a struct dog
- * @d: pointer to values entered in main func
+ * @d: pointer to struct dog
  *
  * Description: print name, age and owner of dog
  * if an element is null, print nil instead of the element
