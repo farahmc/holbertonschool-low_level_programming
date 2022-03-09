@@ -28,7 +28,8 @@ int main(int argc, char *argv[])
 	}
 
 	calc = get_op_func(argv[2]);
-	if (calc == NULL)
+
+	if (calc == NULL || strlen(argv[2] != 1))
 	{
 		printf("Error\n");
 		exit(99);
