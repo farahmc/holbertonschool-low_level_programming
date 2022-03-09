@@ -2,6 +2,16 @@
 #include <stdlib.h>
 #include "3-calc.h"
 
+/**
+ * main- perform a calculation
+ * @argc: number of arguments
+ * @argv: pointer to arguments
+ *
+ * Description: perform a calculation on the command line
+ *
+ * Return: 0
+ */
+
 int main(int argc, char *argv[])
 {
 	int num1;
