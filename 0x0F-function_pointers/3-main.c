@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "3-calc.h"
 
 /**
@@ -29,7 +30,7 @@ int main(int argc, char *argv[])
 
 	calc = get_op_func(argv[2]);
 
-	if (calc == NULL || strlen(argv[2] != 1))
+	if (calc == NULL || strlen(argv[2]) != 1)
 	{
 		printf("Error\n");
 		exit(99);
