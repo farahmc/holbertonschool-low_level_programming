@@ -20,7 +20,7 @@ void print_all(const char * const format, ...)
 	float f;
 
 	va_start(args, format);
-	while (format[index] != '\0')
+	while (format[index] != '\0' && *format != '\0')
 	{
 		if (format[index] != format[0])
 			separator = ", ";
