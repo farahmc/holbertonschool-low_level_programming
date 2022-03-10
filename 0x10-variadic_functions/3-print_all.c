@@ -12,7 +12,6 @@
 void print_all(const char * const format, ...)
 {
 	va_list args;
-
 	int i;
 	int index = 0;
 	char c;
@@ -21,7 +20,6 @@ void print_all(const char * const format, ...)
 	float f;
 
 	va_start(args, format);
-
 	while (format[index] != '\0')
 	{
 		if (format[index] != format[0])
