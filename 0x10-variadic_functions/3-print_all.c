@@ -16,15 +16,17 @@ void print_all(const char * const format, ...)
 	int i;
 	int index = 0;
 	char c;
-	char *s, *separator;
+	char *s;
+	char *separator = "";
 	float f;
 
 	va_start(args, format);
 
 	while (format[index] != '\0')
 	{
-		if (format[index + 1])
+		if (format[index] != format[0])
 			separator = ", ";
+
 		switch (format[index])
 		{
 		case 's':
@@ -32,19 +34,19 @@ void print_all(const char * const format, ...)
 			if (s == NULL)
 				s = "(nil)";
 
-			printf("%s%s", s, separator);
+			printf("%s%s", separator, s);
 			break;
 		case 'i':
 			i = va_arg(args, int);
-			printf("%d%s", i, separator);
+			printf("%s%d", separator, i);
 			break;
 		case 'c':
 			c = (char)va_arg(args, int);
-			printf("%c%s", c, separator);
+			printf("%s%c", separator, c);
 			break;
 		case 'f':
 			f = va_arg(args, double);
-			printf("%f%s", f, separator);
+			printf("%s%f", separator, f);
 			break;
 		}
 		index++;
