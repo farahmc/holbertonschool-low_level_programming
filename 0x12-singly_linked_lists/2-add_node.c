@@ -37,20 +37,25 @@ list_t *add_node(list_t **head, const char *str)
 {
 	list_t *newNode;
 
+	/*create new node and allocate memory*/
 	newNode = malloc(sizeof(*newNode));
 	if (newNode == NULL)
 		return (NULL);
 
+	/*give it a value (copy string) - remember strdup also mallocs*/
 	newNode->str = strdup(str);
-
+	/*free if str is null*/
 	if (newNode->str == NULL)
 	{
 		free(newNode);
 		return (NULL);
 	}
 
+	/*length of str using _strlen*/
 	newNode->len = _strlen(newNode->str);
+	/*newNode points to head*/
 	newNode->next = *head;
+	/*make newNode head*/
 	*head = newNode;
 
 	return (newNode);
