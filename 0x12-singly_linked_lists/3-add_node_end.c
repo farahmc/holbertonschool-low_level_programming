@@ -37,11 +37,14 @@ list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *newNode;
 
+	/*create a new node and allocate memory*/
 	newNode = malloc(sizeof(newNode));
 	if (newNode == NULL)
 		return (NULL);
 
+	/*give a value by copying string - remember strdup also mallocs*/
 	newNode->str = strdup(str);
+	/*if str is null, free memory*/
 	if (newNode->str == NULL)
 	{
 		free(newNode);
@@ -49,9 +52,12 @@ list_t *add_node_end(list_t **head, const char *str)
 	}
 
 	newNode->len = _strlen(newNode->str);
+	/*next is null because it is the last in the list */
 	newNode->next = NULL;
+	/*if head is null, it is an empty list*/
 	if (*head == NULL)
 		*head = newNode;
+	/*otherwise, find the last node and set it to the new node*/
 	else
 	{
 		list_t *lastNode = *head;
