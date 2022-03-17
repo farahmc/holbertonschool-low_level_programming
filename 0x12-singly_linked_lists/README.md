@@ -7,3 +7,5 @@ list_t list.
 list.
 - **Task 3:** Write a function that adds a new node at the end of a list_t list.
 - **Task 4:** Write a function that frees a list_t list.
+- **Task 5:** Write a function that prints given string before the main function
+is executed.
