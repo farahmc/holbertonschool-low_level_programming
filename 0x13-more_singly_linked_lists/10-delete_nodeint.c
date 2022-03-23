@@ -25,6 +25,16 @@ int list_len(const listint_t *h)
 	return (i);
 }
 
+/**
+ * delete_nodeint_at_index- delete node at nth point
+ * @head: pointer to pointer to start of linked list
+ * @index: point at which to delete node
+ *
+ * Description: function to delete nth node
+ *
+ * Return: address of new node, else return Null
+ */
+
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
 	listint_t *temp, *next;
