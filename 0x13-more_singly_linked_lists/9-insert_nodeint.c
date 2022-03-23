@@ -4,6 +4,28 @@
 #include "lists.h"
 
 /**
+ * list_len- function to return number of elements in list
+ * @h: pointer to start of list
+ *
+ * Description: function to return number of elements in linked list
+ *
+ * Return: number of nodes
+ */
+
+int list_len(const listint_t *h)
+{
+	int i = 0;
+
+	while (h != NULL)
+	{
+		h = h->next;
+		i++;
+	}
+
+	return (i);
+}
+
+/**
  * insert_nodeint_at_index - add a node to a point in the list
  * @head: pointer to a pointer to the start of list
  * @n: data value
@@ -16,24 +38,43 @@
 
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
-	listint_t *new, *temp = *head;
-	unsigned int count;
+	listint_t *new, *temp;
+	unsigned int count, i;
 
-	new = malloc(sizeof(*new));
-	if (new == NULL)
+	if (head == NULL)/* check if pointer points to list */
 		return (NULL);
 
-	while (temp != NULL)
+	if (*head == NULL && idx != 0)/* check if list has existing nodes*/
+		return (NULL);
+
+	count = list_len(*head);
+	if (idx > (count + 1))/* check if idx > count */
+		return (NULL);
+
+	new = malloc(sizeof(*new));/* create new */
+	if (new == NULL)
+		return (NULL);
+	new->n = n;
+
+	if (idx == 0)/*if index is 0*/
 	{
-		if (count == idx)
-		{
-			new->n = n;
-			new->next = temp->next;
-			break;
-		}
-		temp = temp->next;
-		count++;
+		new->next = *head;
+		*head = new;
+		return (*head);
 	}
 
-	return (new);
+	temp = *head;
+	i = 0;
+	while (i < idx)
+	{
+		if (i == idx - 1)
+		{
+			new->next = temp->next;
+			temp->next = new;
+			return (new);
+		}
+		temp = temp->next;
+		i++;
+	}
+	return (NULL);
 }
