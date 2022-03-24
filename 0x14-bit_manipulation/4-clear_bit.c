@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * clear_bit - set a bit to 1 at a given index
+ * clear_bit - clear a bit at a given index
  * @n: the given number
  * @index: the position to clear the bit
  *
@@ -11,7 +11,6 @@
  *
  * Return: 1 if bit is changed, else -1
  */
-
 
 int clear_bit(unsigned long int *n, unsigned int index)
 {
