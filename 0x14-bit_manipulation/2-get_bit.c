@@ -8,7 +8,7 @@
  *
  * Description: interate through bits by right shifting
  * if loop position is equal to index, return the value
-
+ *
  * Return: value of the bit at the given index, or -1 if error
  */
 
