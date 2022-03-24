@@ -15,7 +15,7 @@ int main(void)
 	int i = 3;
 
 	printf("%lu, %lu", n1, n2);
-	while (i < 50)
+	while (i <= 50)
 	{
 		printf(", %lu", next);
 		n1 = n2;
