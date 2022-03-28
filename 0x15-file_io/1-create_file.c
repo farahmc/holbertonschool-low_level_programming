@@ -46,13 +46,16 @@ int create_file(const char *filename, char *text_content)
 		return (-1);
 
 	open_file = open(filename, O_RDWR | O_CREAT | O_TRUNC, 600);
+	if (open_file == -1)
+		return (-1);
+
 	if (text_content == NULL)
 		return (1);
 
 	length = _strlen(text_content);
 	write_file = write(open_file, text_content, length);
 
-	if (open_file == -1 || write_file == -1)
+	if (write_file == -1)
 	{
 		close(open_file);
 		return (-1);
