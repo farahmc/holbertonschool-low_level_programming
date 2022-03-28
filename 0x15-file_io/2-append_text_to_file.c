@@ -24,6 +24,18 @@ int _strlen(char *s)
 	return (1 + _strlen(s));
 }
 
+/**
+ * append_text_to_file - append text to file
+ * @filename: name of file
+ * @text_content: content to write in file
+ *
+ * Description: append text to file
+ * if text_content is null, do not create a new file
+ *
+ * Return: 1 is success, -1 on failure
+ */
+
+
 int append_text_to_file(const char *filename, char *text_content)
 {
 	int open_file, app_file, length;
