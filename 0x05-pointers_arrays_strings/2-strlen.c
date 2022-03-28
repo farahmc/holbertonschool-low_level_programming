@@ -12,10 +12,12 @@
 
 int _strlen(char *s)
 {
-	int numofchar;
+	int i;
 
-	for (numofchar = 0; *s != '\0'; s++)
-		numofchar++;
+	if (s == NULL || *s == '\0')
 
-	return (numofchar);
+	for (i = 0; *s != '\0'; s++)
+		i++;
+
+	return (i);
 }
