@@ -15,6 +15,7 @@ int _strlen(char *s)
 	int i;
 
 	if (s == NULL || *s == '\0')
+		return (0);
 
 	for (i = 0; *s != '\0'; s++)
 		i++;
