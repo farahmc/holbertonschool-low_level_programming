@@ -19,7 +19,7 @@
 
 int main(int argc, char *argv[])
 {
-	int source, dest, close_source, close_dest;
+	int source, dest;
 
 	if (argc != 3)
 	{
@@ -41,19 +41,7 @@ int main(int argc, char *argv[])
 		exit(99);
 	}
 
-	close_source = close(source);
-	if (close(source) == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d", close_source);
-		exit(100);
-	}
 
-	close_dest = close(dest);
-	if (close(dest) == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d", close_dest);
-		exit(100);
-	}
 	close(source);
 	close(dest);
 	return (0);
