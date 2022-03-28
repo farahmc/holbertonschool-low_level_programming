@@ -35,7 +35,6 @@ int _strlen(char *s)
  * Return: 1 is success, -1 on failure
  */
 
-
 int append_text_to_file(const char *filename, char *text_content)
 {
 	int open_file, app_file, length;
@@ -52,7 +51,7 @@ int append_text_to_file(const char *filename, char *text_content)
 	if (app_file == -1)
 		return (-1);
 
-	close (open_file);
+	close(open_file);
 
 	return (1);
 }
