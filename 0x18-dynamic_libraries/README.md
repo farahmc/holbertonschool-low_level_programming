@@ -38,3 +38,6 @@ char *_strstr(char *haystack, char *needle);
   - How to use them (Linux only)
   - What are the differences between static and dynamic libraries
   - What are the advantages and drawbacks of each of them
+
+### 3. Let's call C functions from Python
+- Create a dynamic library that contains C functions that can be called from Python.
