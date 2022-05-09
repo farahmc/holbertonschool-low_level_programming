@@ -30,14 +30,5 @@ char *_strstr(char *haystack, char *needle);
 ### 1. Without libraries what have we? We have no past and no future
 - Create a script that creates a dynamic library called liball.so from all the .c files that are in the current directory.
 
-### 2. Either write something worth reading or do something worth writing
-- Write a blog post describing the differences between static and dynamic libraries. It should cover:
-  - Why using libraries in general
-  - How do they work
-  - How to create them (Linux only)
-  - How to use them (Linux only)
-  - What are the differences between static and dynamic libraries
-  - What are the advantages and drawbacks of each of them
-
 ### 3. Let's call C functions from Python
 - Create a dynamic library that contains C functions that can be called from Python.
