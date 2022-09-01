@@ -1,4 +1,5 @@
 # 0x1E. C - Search Algorithms
+Group project with [Matthew Brinkmann](https://github.com/Matthew-brinkmann)
 
 ## Tasks
 
